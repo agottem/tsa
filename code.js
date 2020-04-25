@@ -173,3 +173,12 @@ function initPage ()
 
 
 window.onload = initPage;
+
+$(document).ready(function(){
+  $('.carousel').slick({
+  slidesToShow: 1,
+  arrows: true,
+  dots:false,
+  infinite: true
+  });
+});

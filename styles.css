@@ -1207,3 +1207,132 @@ h2
 {
     height: 2.0rem;
 }
+
+
+#testimonial
+{
+    background: #8E877F;
+    padding: 40px 0;
+}
+
+#testimonial h1
+{
+color:white;
+}
+
+.slider-wrapper
+{
+    max-width: 980px;
+    padding: 20px 120px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.slider-wrapper:hover .slick-prev:before{
+    left: -35px;
+    opacity: 1;
+}
+
+.slider-wrapper:hover .slick-next:before{
+    right: -30px;
+    opacity: 1;
+}
+
+.slick-slider-item
+{
+    display: flex!important;
+    justify-content: space-between;
+    min-height: 230px;
+    align-items: center;
+}
+
+.avatar
+{
+    margin: 0 60px 0 10px;
+    position:relative;
+    min-width:174px;
+}
+
+.avatar img
+{
+    width: 174px;
+    height: 174px;
+    border-radius:50%;
+}
+
+.avatar:before
+{
+    content:' ';
+    display:block;
+    width: calc(100% + 12px);
+    height: calc(100% + 12px);
+    transform: translate(-50%, -50%);
+    z-index:-1;
+    border-radius: 50%;
+    background: linear-gradient(to right, #f64646, rgba(255,100,100,0.29));
+    position:absolute;
+    top:50%;
+    left: 50%;
+}
+
+.review-title
+{
+    font-size: 36px;
+   font-family: Georgia, "Times New Roman", sans-serif;
+    color: white;
+    margin: 0 0 16px 0;
+    quotes: "\201C" "\201D";
+    position: relative;
+}
+
+.review-title:before
+{
+    content: open-quote;
+    display: block;
+    opacity: 0.3;
+    font-size: 250px;
+    position: absolute;
+    top: -55px;
+    left: -45px;
+}
+
+.review-description
+{
+    font-size: 17px;
+    font-family: var(--content-font);
+    color: white;
+    margin: 0 0 16px 0;
+    line-height: 34px;
+}
+
+.slick-prev:before
+{
+    content: " ";
+    height: 16px;
+    width: 16px;
+    border-top: 2px solid #ff6464;
+    border-left: 2px solid #ff6464;
+    transform: rotate(-45deg);
+    position: absolute;
+    left: -60px;
+    transition: 0.3s;
+    opacity: 0;
+}
+
+.slick-next:before
+{
+    content: " ";
+    height: 16px;
+    width: 16px;
+    border-top: 2px solid #ff6464;
+    border-left: 2px solid #ff6464;
+    transform: rotate(135deg);
+    position: absolute;
+    right: -60px;
+    transition: 0.3s;
+    opacity: 0;
+}
+
+.slick-next:focus:before, .slick-prev:focus:before{
+  opacity: 0;
+}

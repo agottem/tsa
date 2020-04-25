@@ -210,6 +210,51 @@ a.button
     border-left-color: var(--border-color);
 }
 
+.slick-slider-item
+{
+
+    flex-direction: column;
+     text-align: center;
+}
+
+.slider-wrapper
+{
+    padding: 20px 40px;
+}
+
+.avatar
+{
+    margin: 10px 0;
+}
+
+.slick-prev:before
+{
+    left: 0px;
+    opacity: 1;
+}
+
+.slick-next:before
+{
+    right: 0px;
+    opacity: 1;
+}
+
+.review-title:before
+{
+    left:0;
+}
+
+.slider-wrapper:hover .slick-prev:before
+{
+    left: 0;
+    opacity: 1;
+}
+
+.slider-wrapper:hover .slick-next:before
+{
+    right: 0;
+    opacity: 1;
+}
 
 #footer .left
 {
