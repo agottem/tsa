@@ -171,6 +171,18 @@ function handleScroll ()
     updatePage();
 }
 
+function loadSlider ()
+{
+$(document).ready(function(){
+  $('.carousel').slick({
+  slidesToShow: 1,
+  arrows: true,
+  dots:false,
+  infinite: true
+  });
+});
+}
+
 function initPage ()
 {
     whoweare_profiles = document.querySelectorAll("#whoweare .body .profile");
@@ -183,17 +195,9 @@ function initPage ()
     main.style.display = "block";
 
     updatePage();
+    loadSlider();
     showBanner();
 }
 
 
 window.onload = initPage;
-
-$(document).ready(function(){
-  $('.carousel').slick({
-  slidesToShow: 1,
-  arrows: true,
-  dots:false,
-  infinite: true
-  });
-});
