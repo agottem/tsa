@@ -19,6 +19,20 @@ function isVisible (e)
     return false;
 }
 
+function showBanner ()
+{
+    document.getElementById("banner").style.display = "block";
+
+    return true;
+}
+
+function hideBanner ()
+{
+    document.getElementById("banner").style.display = "none";
+
+    return true;
+}
+
 function showMenuLinks ()
 {
     var open_e  = document.getElementById("menu_open");
@@ -169,6 +183,7 @@ function initPage ()
     main.style.display = "block";
 
     updatePage();
+    showBanner();
 }
 
 

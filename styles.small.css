@@ -268,3 +268,14 @@ a.button
 {
     margin-right: 0.5rem;
 }
+
+#banner .content
+{
+    margin: 20% auto 15% auto;
+    width:  81%;
+}
+
+#banner a
+{
+    width: 60%;
+}
