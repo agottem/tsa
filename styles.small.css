@@ -222,7 +222,7 @@ a.button
     padding: 20px 40px;
 }
 
-.avatar
+.slide-avatar
 {
     margin: 10px 0;
 }
@@ -239,7 +239,7 @@ a.button
     opacity: 1;
 }
 
-.review-title:before
+.feedback-title:before
 {
     left:0;
 }
