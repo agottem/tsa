@@ -276,7 +276,7 @@ function initPage ()
     updatePage();
     showBanner();
 
-    initCountdown('Jun 27, 2020 16:04:00');
+    initCountdown('Jun 28, 2020 09:00:00');
 }
 
 

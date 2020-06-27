@@ -2768,6 +2768,23 @@ h2
     background: #ECE9E6;
     background: -webkit-linear-gradient(to bottom, #FFFFFF, #ECE9E6);
     background: linear-gradient(to bottom, #FFFFFF, #ECE9E6);
+
+    position: relative;
+
+}
+
+
+#landing .second-page.zink {
+    height: 70vh;
+    padding: 120px 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #ADA996;
+    background: -webkit-linear-gradient(to bottom, #FFFFFF, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);
+    background: linear-gradient(to bottom, #FFFFFF, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);
+
     position: relative;
 
 }
