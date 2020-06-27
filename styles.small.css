@@ -491,23 +491,22 @@ a.button
     width: 70%;
 }
 
-#landing .second-page {
-    height: 80vh;
-}
-
-#landing .second-page p {
-    font-size: 90%;
-}
-
 @media all and (max-width: 668px) {
 
     #landing .first-page h2 {
-        font-size: 140%;
-        margin: 30% 0 0;
+        font-size: 160%;
+        margin: 15% 0 0;
+    }
+
+    #landing .first-page p {
+        font-size: 110%;
+    }
+
+    #landing .first-page p:after {
+        width: 6rem;
     }
 
     #landing .second-page {
-        height: 90vh;
         padding: 80px 0;
     }
 
@@ -518,22 +517,31 @@ a.button
     #landing .second-page .button {
         bottom: 10%;
     }
+
+    #landing .third-page h2 {
+        width: 90%;
+        font-size: 210%;
+    }
 }
 
 @media all and (max-width: 400px) {
 
+    #landing .first-page .header img {
+        width: 100px
+    }
+
     #landing .first-page h2 {
-        font-size: 130%;
-        margin: 35% 0 0;
+        font-size: 140%;
+        margin: 15% 0 0;
         width: 80%;
     }
 
     #landing .first-page .button {
-         bottom: 100px;
+         bottom: 20%;
      }
 
-    #landing .second-page {
-        height: 110vh;
+    #landing .second-page p {
+        font-size: 110%;
     }
 }
 

@@ -2624,7 +2624,7 @@ h2
 }
 
 #landing .first-page {
-    background-image: url('media/landing_banner.jpg');
+    background-image: url('media/landing_head_banner.jpg');
     background-position: center 100px;
     background-size: cover;
     background-repeat: no-repeat;
@@ -2653,9 +2653,8 @@ h2
 }
 
 #landing .first-page .header {
-    height: 190px;
     width: 100%;
-    background: linear-gradient(to bottom, white, white 55%, transparent);
+    background: linear-gradient(to bottom, white 85%, transparent);
     display: flex;
     justify-content: center;
 }
@@ -2668,25 +2667,18 @@ h2
     transform: scale(1.05);
 }
 
-@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
-    #landing .first-page h2.blured {
-        backdrop-filter: blur(5px) grayscale(0.1) opacity(0.85);
-        background-color: rgba(255, 255, 255, 0.3);
-    }
-}
-
 #landing .first-page .header img {
     width: 120px;
 }
 
 #landing .first-page h2 {
-    margin: 15% 0 0;
+    margin: 10% 0 0;
     border-radius: 8px;
     padding: 8px;
     width: 60%;
     text-align: center;
     line-height: 1.5;
-    color: var(--intro-text-color);
+    color: rgba(0, 0, 0, 0.85);
     font-size: var(--landing-heading-font-size);
     font-weight: var(--bold-font-weight);
     font-family: var(--standout-font);
@@ -2698,19 +2690,16 @@ h2
     text-align: center;
     position: relative;
     line-height: 1.5;
-    color: var(--light-text-color);
-    font-size: var(--intro-text-font-size);
-    font-weight: var(--def-font-weight);
+    font-size: 125%;
+    font-weight: 600;
     font-family: var(--content-font);
-    text-shadow:
-            1px 1px 1px #838383,
-            2px 2px 1px #4f4f4f;
+    color: rgba(0, 0, 0, 0.65);
 }
 
 #landing .first-page p:after {
     content: '';
     background-color: var(--sep-color);
-    width: 6.0rem;
+    width: 10.0rem;
     height: 2px;
     position: absolute;
     bottom: -7px;
@@ -2727,7 +2716,7 @@ h2
 #landing .first-page .button {
     width: 230px;
     position: absolute;
-    bottom: 160px;
+    bottom: 25%;
     cursor: pointer;
 }
 
@@ -2759,7 +2748,6 @@ h2
 
 
 #landing .second-page {
-    height: 70vh;
     padding: 120px 0;
     margin: 0;
     display: flex;
@@ -2768,44 +2756,61 @@ h2
     background: #ECE9E6;
     background: -webkit-linear-gradient(to bottom, #FFFFFF, #ECE9E6);
     background: linear-gradient(to bottom, #FFFFFF, #ECE9E6);
-
     position: relative;
-
-}
-
-
-#landing .second-page.zink {
-    height: 70vh;
-    padding: 120px 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: #ADA996;
-    background: -webkit-linear-gradient(to bottom, #FFFFFF, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);
-    background: linear-gradient(to bottom, #FFFFFF, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);
-
-    position: relative;
-
-}
-
-#landing .second-page .button {
-    position: absolute;
-    bottom: 15%;
 }
 
 #landing .second-page p {
     margin: 0 0 24px;
     width: 60%;
     line-height: 1.75;
-    color: var(--dark-header-text-color);
-    font-size: var(--def-font-size);
-    font-weight: var(--def-font-weight);
+    color: rgba(70, 70, 70, 1);
+    font-size: 120%;
+    font-weight: 500;
     font-family: var(--content-font);
 }
 
 #landing .second-page p::first-letter {
-    font-size: 1.45rem;
+    font-size: 1.55rem;
+    font-weight: 600;
+}
+
+#landing .third-page {
+    background-image: url('media/landing_banner.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 90vh;
+    position: relative;
+}
+
+#landing .third-page .overlay {
+    background: var(--overlay-background-color);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#landing .third-page h2 {
+    margin: 0 0 24px;
+    color: var(--light-text-color);
+    text-align: center;
+    font-family: var(--standout-font);
+    font-size: 240%;
+    font-weight: var(--header-font-weight);
+}
+
+#landing .third-page .button {
+    position: absolute;
+    bottom: 20%;
+    cursor: pointer;
 }
 
 #landing #register-form .wrapper {
