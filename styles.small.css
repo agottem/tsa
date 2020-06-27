@@ -475,3 +475,68 @@ a.button
 /*------------------------------------------------------------------*/
 /*--------------- END COACHING PAGE -------------------------------*/
 /*----------------------------------------------------------------*/
+
+
+
+/*------------------------------------------------------------------*/
+/*------------- START COACHING PAGE -------------------------------*/
+/*----------------------------------------------------------------*/
+
+#landing #request_simulation .simulation-modal-content {
+    width: 70%;
+}
+
+#landing .first-page h2 {
+    font-size: 170%;
+    width: 70%;
+}
+
+#landing .second-page {
+    height: 80vh;
+}
+
+#landing .second-page p {
+    font-size: 90%;
+}
+
+@media all and (max-width: 668px) {
+
+    #landing .first-page h2 {
+        font-size: 140%;
+        margin: 30% 0 0;
+    }
+
+    #landing .second-page {
+        height: 90vh;
+        padding: 80px 0;
+    }
+
+    #landing .second-page p {
+        width: 70%;
+    }
+
+    #landing .second-page .button {
+        bottom: 10%;
+    }
+}
+
+@media all and (max-width: 400px) {
+
+    #landing .first-page h2 {
+        font-size: 130%;
+        margin: 35% 0 0;
+        width: 80%;
+    }
+
+    #landing .first-page .button {
+         bottom: 100px;
+     }
+
+    #landing .second-page {
+        height: 110vh;
+    }
+}
+
+/*------------------------------------------------------------------*/
+/*--------------- END LANDING PAGE -------------------------------*/
+/*----------------------------------------------------------------*/

@@ -2611,3 +2611,300 @@ h2
 /*--------------------------------------------------*/
 /*-------------- END COUCHING PAGE ----------------*/
 /*------------------------------------------------*/
+
+
+
+/*---------------------------------------------------*/
+/*------------ START LANDING PAGE -----------------*/
+/*-------------------------------------------------*/
+
+#landing {
+    min-width: 320px;
+    scroll-behavior: smooth;
+}
+
+#landing .first-page {
+    background-image: url('media/landing_banner.jpg');
+    background-position: center 100px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: calc(100vh + 55px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+#landing .first-page:before {
+    content: '';
+    background-image: url('media/intro_shaping.svg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: rotate(180deg);
+    top: 95px;
+    left: 0;
+    right: 0;
+    position: absolute;
+    display: inline-block;
+    height: 50px;
+    width: 100%;
+    filter: blur(6px);
+}
+
+#landing .first-page .header {
+    height: 190px;
+    width: 100%;
+    background: linear-gradient(to bottom, white, white 55%, transparent);
+    display: flex;
+    justify-content: center;
+}
+
+#landing .first-page .header a {
+    transition: transform .4s;
+}
+
+#landing .first-page .header a:hover {
+    transform: scale(1.05);
+}
+
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+    #landing .first-page h2.blured {
+        backdrop-filter: blur(5px) grayscale(0.1) opacity(0.85);
+        background-color: rgba(255, 255, 255, 0.3);
+    }
+}
+
+#landing .first-page .header img {
+    width: 120px;
+}
+
+#landing .first-page h2 {
+    margin: 15% 0 0;
+    border-radius: 8px;
+    padding: 8px;
+    width: 60%;
+    text-align: center;
+    line-height: 1.5;
+    color: var(--intro-text-color);
+    font-size: var(--landing-heading-font-size);
+    font-weight: var(--bold-font-weight);
+    font-family: var(--standout-font);
+}
+
+#landing .first-page p {
+    margin: 32px 0 0;
+    width: 80%;
+    text-align: center;
+    position: relative;
+    line-height: 1.5;
+    color: var(--light-text-color);
+    font-size: var(--intro-text-font-size);
+    font-weight: var(--def-font-weight);
+    font-family: var(--content-font);
+    text-shadow:
+            1px 1px 1px #838383,
+            2px 2px 1px #4f4f4f;
+}
+
+#landing .first-page p:after {
+    content: '';
+    background-color: var(--sep-color);
+    width: 6.0rem;
+    height: 2px;
+    position: absolute;
+    bottom: -7px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#landing .first-page .shaping {
+    position: absolute;
+    bottom: -1px;
+    width: 100%;
+}
+
+#landing .first-page .button {
+    width: 230px;
+    position: absolute;
+    bottom: 160px;
+    cursor: pointer;
+}
+
+.underline {
+    margin: 15% 0 0;
+    width: 60%;
+    text-align: center;
+    line-height: 1.5;
+    color: rgba(0, 0, 0, 0.8);
+    font-size: var(--landing-heading-font-size);
+    font-weight: var(--bold-font-weight);
+    font-family: var(--standout-font);
+}
+
+.underline a {
+    color: rgba(0, 0, 0, 0.8);
+    cursor: default;
+    flex: 1;
+    text-decoration: none;
+    background-repeat: no-repeat;
+    transition: background .5s;
+    background-size: 100% 100%;
+    background-position: 0 0.2em;
+    box-shadow: inset 0 -.5em 0 0 var(--button-background-color);
+    text-shadow:
+            0 1px 1px rgba(160, 160, 160, 0.8),
+            1px -1px 1px rgba(179, 179, 179, 0.8);
+}
+
+
+#landing .second-page {
+    height: 70vh;
+    padding: 120px 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #ECE9E6;
+    background: -webkit-linear-gradient(to bottom, #FFFFFF, #ECE9E6);
+    background: linear-gradient(to bottom, #FFFFFF, #ECE9E6);
+    position: relative;
+
+}
+
+#landing .second-page .button {
+    position: absolute;
+    bottom: 15%;
+}
+
+#landing .second-page p {
+    margin: 0 0 24px;
+    width: 60%;
+    line-height: 1.75;
+    color: var(--dark-header-text-color);
+    font-size: var(--def-font-size);
+    font-weight: var(--def-font-weight);
+    font-family: var(--content-font);
+}
+
+#landing .second-page p::first-letter {
+    font-size: 1.45rem;
+}
+
+#landing #register-form .wrapper {
+    width: 80%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+#landing #register-form h2 {
+    color: var(--darken-gray);
+    font-family: var(--standout-font);
+    font-size: var(--intro-header-font-size);
+    font-weight: var(--header-font-weight);
+    position: relative;
+    padding: 1rem 0;
+    margin: 0 0 60px;
+    text-align: center;
+}
+
+#landing #register-form a {
+    cursor: pointer;
+    width: 230px;
+    margin: 0 auto;
+}
+
+#landing #register-form .simulation-modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--modal-background-color);
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.1);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+
+#landing #register-form .simulation-modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 2.5rem;
+    width: 50%;
+    border-radius: 0.5rem;
+}
+
+#landing #register-form .close-button {
+    position: absolute;
+    font-size: 3rem;
+    cursor: pointer;
+    top: 0;
+    right: 18px;
+    transition: transform .3s;
+    color: var(--dark-header-text-color);
+}
+
+#landing #register-form .close-button:hover {
+    transform: scale(1.1);
+}
+
+#landing #register-form .show-modal {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+    z-index: 3;
+}
+
+#landing #register-form form {
+
+}
+
+#landing #register-form .form-group {
+    margin-bottom: 1rem;
+}
+
+#landing #register-form .form-group label {
+    display: inline-block;
+    margin-bottom: .5rem;
+}
+
+
+#landing #register-form .form-group .form-control {
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    line-height: 1.5;
+    color: var(--dark-header-text-color);
+    font-size: var(--button-font-size);
+    font-weight: var(--def-font-weight);
+    font-family: var(--content-font);
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    box-sizing: border-box;
+}
+
+#landing #register-form .submit-button {
+    color: var(--button-text-color);
+    background-color: var(--button-background-color);
+    border-color: var(--button-background-color);
+    padding: 0.5rem 2rem;
+    font-size: var(--button-font-size);
+    text-decoration: none;
+    text-align: center;
+    border-width: 0.2rem;
+    border-style: solid;
+    border-radius: 0.35rem;
+    cursor: pointer;
+}
+
+/*--------------------------------------------------*/
+/*-------------- END LANDING PAGE ----------------*/
+/*------------------------------------------------*/
