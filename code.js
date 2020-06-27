@@ -1,5 +1,6 @@
 var whoweare_profiles = [];
 var faq_questions     = [];
+var experience_items   = [];
 
 var testimonials_wheel = {
     entries: [],
@@ -229,6 +230,9 @@ function updatePage ()
 
     for(var i = 0; i < faq_questions.length; i++)
         animateOnVisible(faq_questions[i]);
+
+    for(var i = 0; i < experience_items.length; i++)
+        animateOnVisible(experience_items[i]);
 }
 
 function handleScroll ()
@@ -237,7 +241,7 @@ function handleScroll ()
 }
 
 function initCountdown (finishDate) {
-    console.log('initing countdown', finishDate)
+    console.log('Initializing countdown', finishDate)
     const second = 1000,
         minute = second * 60,
         hour = minute * 60,
@@ -249,9 +253,9 @@ function initCountdown (finishDate) {
                 distance = countDown - now;
 
             document.getElementById('countdown-days').innerText = Math.floor(distance / (day)),
-                document.getElementById('countdown-hours').innerText = Math.floor((distance % (day)) / (hour)),
-                document.getElementById('countdown-minutes').innerText = Math.floor((distance % (hour)) / (minute)),
-                document.getElementById('countdown-seconds').innerText = Math.floor((distance % (minute)) / second);
+            document.getElementById('countdown-hours').innerText = Math.floor((distance % (day)) / (hour)),
+            document.getElementById('countdown-minutes').innerText = Math.floor((distance % (hour)) / (minute)),
+            document.getElementById('countdown-seconds').innerText = Math.floor((distance % (minute)) / second);
 
             if (distance < 0) {
                 clearInterval(timer);
@@ -265,6 +269,7 @@ function initPage ()
 {
     whoweare_profiles = document.querySelectorAll("#whoweare .body .profile");
     faq_questions     = document.querySelectorAll("#faq .body .question");
+    experience_items  = document.querySelectorAll("#experience_details ul li");
 
     window.onscroll = handleScroll;
 

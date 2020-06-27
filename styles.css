@@ -747,12 +747,18 @@ h2
 #experience .desk .details li
 {
     list-style-type: none;
-
     color: var(--light-text-color);
-
     margin: 1.0rem 0.0rem;
-
     font-size: var(--bullet-text-font-size);
+    margin-left: 120%;
+    width: 100%;
+}
+
+#experience .details .anim {
+    animation-name: anim_slidein;
+    animation-fill-mode: forwards;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
 }
 
 #experience .desk .details a
@@ -2757,6 +2763,7 @@ h2
     background: -webkit-linear-gradient(to bottom, #FFFFFF, #ECE9E6);
     background: linear-gradient(to bottom, #FFFFFF, #ECE9E6);
     position: relative;
+    overflow: hidden;
 }
 
 #landing .second-page p {
@@ -2772,6 +2779,23 @@ h2
 #landing .second-page p::first-letter {
     font-size: 1.55rem;
     font-weight: 600;
+}
+
+#landing .second-page p:nth-child(even)
+{
+    margin-left: 200%;
+}
+
+#landing .second-page p:nth-child(odd)
+{
+    margin-left: -200%;
+}
+
+#landing .second-page .anim {
+    animation-name:            anim_slidein;
+    animation-fill-mode:       forwards;
+    animation-duration:        2s;
+    animation-iteration-count: 1;
 }
 
 #landing .third-page {

@@ -41,8 +41,6 @@
                    Learn why IT career is the right choice for your future and enroll
                    today!">
 
-    <script type="text/javascript" src="../../code.js"></script>
-
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-160012508-1">
     </script>
 
@@ -165,6 +163,25 @@
     </div>
 
     <script>
+        function isVisible (e) {
+            const rect = e.getBoundingClientRect();
+
+            if (rect.top >= 0 &&
+                rect.top <= window.innerHeight ||
+                rect.bottom >= 0 &&
+                rect.bottom <= window.innerHeight)
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        function animateOnVisible (e) {
+            if(!e.classList.contains("anim") && isVisible(e))
+                e.classList.add("anim");
+        }
+
         function initRequestSimulationModal () {
             const modal = document.querySelector("#landing #register-form .simulation-modal");
             const trigger1 = document.querySelector("#landing .trigger-modal1");
@@ -185,7 +202,18 @@
             trigger2.addEventListener("click", toggleModal);
             closeButton.addEventListener("click", toggleModal);
             window.addEventListener("click", windowOnClick);
+
+            updatePage()
         }
+
+        const landing_points = document.querySelectorAll("#landing .second-page p");
+
+        function updatePage() {
+            for(let i = 0; i < landing_points.length; i++)
+                animateOnVisible(landing_points[i]);
+        }
+
+        window.onscroll = updatePage;
 
         window.onload = initRequestSimulationModal;
     </script>
