@@ -2642,6 +2642,10 @@ h2
     width: 15rem;
 }
 
+#landing #intro_box .button {
+    cursor: pointer;
+}
+
 #landing .second-page {
     padding: 120px 0;
     margin: 0;
