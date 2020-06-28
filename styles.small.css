@@ -482,29 +482,23 @@ a.button
 /*------------- START COACHING PAGE -------------------------------*/
 /*----------------------------------------------------------------*/
 
+#landing #intro {
+    height: 60rem;
+}
+
+#landing #intro_box {
+    top: 20%;
+}
+
+#landing #intro .layer a {
+    margin-top: 3rem;
+}
+
 #landing #request_simulation .simulation-modal-content {
     width: 70%;
 }
 
-#landing .first-page h2 {
-    font-size: 170%;
-    width: 70%;
-}
-
 @media all and (max-width: 668px) {
-
-    #landing .first-page h2 {
-        font-size: 160%;
-        margin: 15% 0 0;
-    }
-
-    #landing .first-page p {
-        font-size: 110%;
-    }
-
-    #landing .first-page p:after {
-        width: 6rem;
-    }
 
     #landing .second-page {
         padding: 80px 0;
@@ -526,19 +520,14 @@ a.button
 
 @media all and (max-width: 400px) {
 
-    #landing .first-page .header img {
-        width: 100px
-    }
-
-    #landing .first-page h2 {
-        font-size: 140%;
-        margin: 15% 0 0;
+    #landing #intro .layer h1 {
+        font-size: 190%;
         width: 80%;
     }
 
-    #landing .first-page .button {
-         bottom: 20%;
-     }
+    #landing #intro .layer a {
+        margin-top: 9rem;
+    }
 
     #landing .second-page p {
         font-size: 110%;
