@@ -516,6 +516,30 @@ a.button
         width: 90%;
         font-size: 210%;
     }
+
+    .countdown-container h3 {
+        background-color: #f5f5f5;
+        padding: 8px;
+        border-radius: 8px;
+    }
+}
+
+@media all and (max-width: 440px) {
+
+    .countdown-container {
+        margin-top: 100px;
+    }
+
+    .countdown-container h2 {
+        margin: 24px 24px 12px;
+    }
+
+    .countdown-container li {
+        font-size: 90%;
+        font-weight: 600;
+        width: 70px;
+        height: 60px;
+    }
 }
 
 @media all and (max-width: 400px) {

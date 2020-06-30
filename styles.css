@@ -2632,6 +2632,7 @@ h2
 
 #landing #intro {
     background-image: url("media/landing_head_banner.jpg");
+    height: 65rem;
 }
 
 #landing #intro .layer h1 {
