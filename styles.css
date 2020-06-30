@@ -2664,7 +2664,7 @@ h2
     margin: 0 0 24px;
     width: 60%;
     line-height: 1.75;
-    color: rgba(70, 70, 70, 1);
+    color: rgb(50, 50, 50, 0.95);
     font-size: 120%;
     font-weight: 500;
     font-family: var(--content-font);
