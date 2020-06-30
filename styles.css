@@ -853,7 +853,8 @@ h2
 #whoweare .body .profile .desc p
 {
     margin: 0.0rem;
-    line-height: 1.25rem;
+    line-height: 1.35rem;
+    text-align: justify;
 }
 
 
