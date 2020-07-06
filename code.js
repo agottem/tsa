@@ -242,27 +242,28 @@ function handleScroll ()
 
 function initCountdown (finishDate) {
     console.log('Initializing countdown', finishDate)
+
     const second = 1000,
         minute = second * 60,
         hour = minute * 60,
         day = hour * 24;
 
     let countDown = new Date(finishDate).getTime();
+
     const timer = setInterval(function() {
-            let now = new Date().getTime(),
-                distance = countDown - now;
+        let now = new Date().getTime();
+        let distance = countDown - now;
 
-            document.getElementById('countdown-days').innerText = Math.floor(distance / (day)),
-            document.getElementById('countdown-hours').innerText = Math.floor((distance % (day)) / (hour)),
-            document.getElementById('countdown-minutes').innerText = Math.floor((distance % (hour)) / (minute)),
-            document.getElementById('countdown-seconds').innerText = Math.floor((distance % (minute)) / second);
+        if (distance < 0) {
+            clearInterval(timer);
+            initCountdown(Date.now() + 1000 * 60 * 60 * 24 * 7);
+        }
 
-            if (distance < 0) {
-                clearInterval(timer);
-                initCountdown(Date.now() + 1000 * 60 * 60 * 24 * 7);
-            }
-
-        }, second)
+        document.getElementById('countdown-days').innerText = Math.floor(distance / (day)),
+        document.getElementById('countdown-hours').innerText = Math.floor((distance % (day)) / (hour)),
+        document.getElementById('countdown-minutes').innerText = Math.floor((distance % (hour)) / (minute)),
+        document.getElementById('countdown-seconds').innerText = Math.floor((distance % (minute)) / second);
+    }, second)
 }
 
 function initPage ()
@@ -281,7 +282,8 @@ function initPage ()
     updatePage();
     showBanner();
 
-    initCountdown('Jun 28, 2020 17:00:00');
+    /* Here you can initialize Countdown timer. Just pass a valid date. */
+    initCountdown('Jul 12, 2020 17:00:00');
 }
 
 
