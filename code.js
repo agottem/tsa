@@ -236,6 +236,31 @@ function handleScroll ()
     updatePage();
 }
 
+function initCountdown (finishDate) {
+    console.log('initing countdown', finishDate)
+    const second = 1000,
+        minute = second * 60,
+        hour = minute * 60,
+        day = hour * 24;
+
+    let countDown = new Date(finishDate).getTime();
+    const timer = setInterval(function() {
+            let now = new Date().getTime(),
+                distance = countDown - now;
+
+            document.getElementById('countdown-days').innerText = Math.floor(distance / (day)),
+                document.getElementById('countdown-hours').innerText = Math.floor((distance % (day)) / (hour)),
+                document.getElementById('countdown-minutes').innerText = Math.floor((distance % (hour)) / (minute)),
+                document.getElementById('countdown-seconds').innerText = Math.floor((distance % (minute)) / second);
+
+            if (distance < 0) {
+                clearInterval(timer);
+                initCountdown(Date.now() + 1000 * 60 * 60 * 24 * 7);
+            }
+
+        }, second)
+}
+
 function initPage ()
 {
     whoweare_profiles = document.querySelectorAll("#whoweare .body .profile");
@@ -250,6 +275,8 @@ function initPage ()
     initWheel(testimonials_wheel, "#testimonials .wheel .content .statement");
     updatePage();
     showBanner();
+
+    initCountdown('Jun 27, 2020 16:04:00');
 }
 
 
