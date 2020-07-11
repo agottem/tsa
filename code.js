@@ -266,6 +266,16 @@ function initCountdown (finishDate) {
     }, second)
 }
 
+function initChatWidget () {
+    const chatWidgetBtn = document.querySelector('.chat_widget .pulse-button');
+    const chatWidgetActions = document.querySelector('.chat_widget .actions');
+
+    chatWidgetBtn.addEventListener('click', () => {
+        console.log('toggling', chatWidgetActions.classList)
+        chatWidgetActions.classList.toggle('open')
+    })
+}
+
 function initPage ()
 {
     whoweare_profiles = document.querySelectorAll("#whoweare .body .profile");
@@ -284,6 +294,8 @@ function initPage ()
 
     /* Here you can initialize Countdown timer. Just pass a valid date. */
     initCountdown('Jul 12, 2020 17:00:00');
+
+    initChatWidget()
 }
 
 
