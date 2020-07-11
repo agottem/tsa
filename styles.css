@@ -2138,7 +2138,7 @@ h2
 
 #interview_thank_you .social_media_btns img
 {
-    height: 2.0rem;
+    max-height: 5.0rem;
 }
 
 #interview_thank_you .social_media_btns a:hover
@@ -2637,7 +2637,7 @@ h2
 }
 
 #landing #intro {
-    background-image: url("media/landing_head_banner.jpg");
+    background-image: url("media/landing_head_banner_sm.jpg");
     height: 65rem;
 }
 
